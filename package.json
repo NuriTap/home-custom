@@ -1,7 +1,7 @@
 {
   "name": "tabby-home-custom",
   "version": "1.0.0",
-  "description": "Tabby Home - a home panel for Tabby to organize and manage SSH/Telnet/Serial connections",
+  "description": "Fork of Tabby Home plugin with additional workflow and session management improvements. SSH/Telnet/Serial connection manager with multi-session execution, jump host support, and bulk actions for selecting multiple servers and launching sessions at once.",
   "keywords": [
     "tabby-plugin"
   ],
