@@ -22,9 +22,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build (если есть)
-        run: npm run build --if-present
-
       - name: Publish to npm
         run: npm publish
         env:

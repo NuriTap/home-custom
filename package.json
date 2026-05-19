@@ -1,6 +1,6 @@
 {
-  "name": "tabby-home",
-  "version": "1.0.1",
+  "name": "tabby-home-custom",
+  "version": "1.0.0",
   "description": "Tabby Home - a home panel for Tabby to organize and manage SSH/Telnet/Serial connections",
   "keywords": [
     "tabby-plugin"
