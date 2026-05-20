@@ -27,4 +27,8 @@ jobs:
         run: npm ci
 
       - name: Publish to npm
-        run: npm publish --provenance --access public || \ (cat ~/.npm/_logs/*.log && exit 1)
+        run: |
+          if ! npm publish --provenance --access public; then
+            cat ~/.npm/_logs/*.log
+            exit 1
+          fi
