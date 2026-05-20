@@ -9,10 +9,6 @@ jobs:
   publish:
     runs-on: ubuntu-latest
 
-    permissions:
-      contents: read
-      id-token: write
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -21,19 +17,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          registry-url: https://registry.npmjs.org
-          provenance: true
-          always-auth: true
+          registry-url: https://registry.npmjs.org/
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Verify npm config
-        run: npm config list
-
       - name: Publish to npm
-        run: |
-          if ! npm publish --provenance --access public; then
-            cat ~/.npm/_logs/*.log
-            exit 1
-          fi
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
