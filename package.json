@@ -1,6 +1,6 @@
 {
   "name": "tabby-home-custom",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Fork of Tabby Home plugin with additional workflow and session management improvements. SSH/Telnet/Serial connection manager with multi-session execution, jump host support, and bulk actions for selecting multiple servers and launching sessions at once.",
   "keywords": [
     "tabby-plugin"
@@ -17,7 +17,7 @@
     "typings",
     "README.md"
   ],
-  "author": "maven9x",
+  "author": "cuppy.tappy",
   "license": "MIT",
   "dependencies": {
     "uuid": "^9.0.0"
